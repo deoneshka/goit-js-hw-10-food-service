@@ -8,8 +8,10 @@ const Theme = {
 
 if (localStorage.getItem('theme') === Theme.DARK) {
     bodyRef.classList.add(Theme.DARK);
-    localStorage.setItem('theme', Theme.DARK);
     switchToogleRef.checked = true;
+} else {
+    bodyRef.classList.add(Theme.LIGHT);
+    switchToogleRef.checked = false;
 };
 
 function switchTheme() {
